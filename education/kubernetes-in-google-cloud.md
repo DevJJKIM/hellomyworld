@@ -4,7 +4,7 @@ description: 'Kubernetes in Google Cloud: Challenge Lab의 가이드 답안입�
 
 # \[qwiklab\] Kubernetes in Google Cloud: Challenge Lab
 
-**\[GSP318\] Kubernetes in Google Cloud: Challenge Lab**의 Hands-on 입니다.   
+**\[GSP318\] Kubernetes in Google Cloud: Challenge Lab**의 Hands-on 입니다.  
 Challenge의 과정 내용은[ 퀵랩 사이트](https://google.qwiklabs.com/focuses/10457?parent=catalog)를 통해 참고하여 주세요. 모든 수행과정은 퀵랩의 순서로 진행됩니다.  
 이번 Lab은 GKE환경 및 Jenkins를 활용한 배포관리를 경험할 수 있어, 향후 다른 프로젝트 적용시에 참고될 수 있는 Lab 입니다.  
 전체 과정을 수행하는데는 약 40여분 정도 소요 됩니다.
@@ -26,7 +26,7 @@ export PROJECT_ID=$(gcloud info --format='value(config.project)')
 gcloud config set compute/zone us-east1-d
 ```
 
-### Task 1: Create a Docker image and store the Dockerfile <a id="step4"></a>
+## Task 1: Create a Docker image and store the Dockerfile <a id="step4"></a>
 
 * Task의 단계별 체크를 위해 setup\_marking.sh를 다운로드 받습니다.
 
@@ -63,7 +63,7 @@ Image exists
 Go ahead and check the activity tracking on the lab page
 {% endhint %}
 
-### Task 2: Test the created Docker image <a id="step5"></a>
+## Task 2: Test the created Docker image <a id="step5"></a>
 
 * docker의 buiild 상태를 확인합니다.
 * docker를 실행시키고, docker의 실행 상태를 확인 합니다.
@@ -84,7 +84,7 @@ Container running and visible on port 8080, good job!
 Go ahead and check the activity tracking on the lab page
 {% endhint %}
 
-### Task 3: Push the Docker image in the Container Repository <a id="step6"></a>
+## Task 3: Push the Docker image in the Container Repository <a id="step6"></a>
 
 * docker 파일을 GCR로 푸시하여 줍니다.
 * 코드는 한줄 씩 실행시켜 주세요.
@@ -96,7 +96,7 @@ docker tag valkyrie-app:v0.0.1 gcr.io/${PROJECT_ID}/valkyrie-app:v0.0.1
 docker push gcr.io/${PROJECT_ID}/valkyrie-app:v0.0.1
 ```
 
-### Task 4: Create and expose a deployment in Kubernetes <a id="step7"></a>
+## Task 4: Create and expose a deployment in Kubernetes <a id="step7"></a>
 
 * Kubernetes로 배포를 하기 위해 **deployment.yaml을 수정**합니다.
 * deployment.yaml의 위치는 valkyrie-app/k8s에 있습니다.
@@ -106,7 +106,7 @@ docker push gcr.io/${PROJECT_ID}/valkyrie-app:v0.0.1
 
   \(\[PROJECT\_ID\]에는 Cloud Console의 PROJECT ID를 입력합니다.deployment.yaml의 **IMAGE\_HERE**은 2개가 있으므로, 두 곳 모두 수정해야합니다.\)
 
-* kubectl 명령어로 deployment.yaml과  service.yaml 배포를 적용하고, pod의 상태를 확인 합니다.
+* kubectl 명령어로 deployment.yaml과 service.yaml 배포를 적용하고, pod의 상태를 확인 합니다.
 * `kubectl get service` 결과에서 EXTERNAL-IP가 생성되었음을 확인하세요.
 * 이후 과정의 진행사항 체크를 위해 EXTERNAL-IP를 브라우저 새 탭의 주소창에 입력해서 띄워두세요.
 * 코드 실행 후 사이트에서  **Check my progress**를 클릭하세요.
@@ -124,7 +124,7 @@ kubectl apply -f service.yaml
 kubectl get service
 ```
 
-### Task 5: Update the deployment with a new version of valkyrie-app <a id="step8"></a>
+## Task 5: Update the deployment with a new version of valkyrie-app <a id="step8"></a>
 
 * replica set을 3개로 줍니다.
 * 아래 코드 실행 후 사이트에서 첫번째 **Check my progress**를 클릭하세요.
@@ -153,8 +153,8 @@ docker tag valkyrie-app:v0.0.2 gcr.io/${PROJECT_ID}/valkyrie-app:v0.0.2
 docker push gcr.io/${PROJECT_ID}/valkyrie-app:v0.0.2
 ```
 
-* 아래 명령어를 통해 ****Kubernetes의 배포에서 **image 태그를 v0.0.2로 수정\(2곳 수정 필요\)**하고, 결과를 확인 합니다.
-*  **Web Preview**를 통해 테이블 색이 green으로 변경되었는지 확인 합니다. \(업데이트가 실시간으로 잘 안될경우, `kubectl get service`를 통해 확인된 EXTERNAL-IP를 브라우저 새 탭의 주소창에 입력한 탭을 새로고침하여 확인\)
+* 아래 명령어를 통해 **\*\*Kubernetes의 배포에서** image 태그를 v0.0.2로 수정\(2곳 수정 필요\)\*\*하고, 결과를 확인 합니다.
+* **Web Preview**를 통해 테이블 색이 green으로 변경되었는지 확인 합니다. \(업데이트가 실시간으로 잘 안될경우, `kubectl get service`를 통해 확인된 EXTERNAL-IP를 브라우저 새 탭의 주소창에 입력한 탭을 새로고침하여 확인\)
 * 사이트에서 두번째 **Check my progress**를 클릭하세요.
 
 ```text
@@ -163,9 +163,9 @@ kubectl edit deployment valkyrie-dev
 
 ![](../.gitbook/assets/kubectl_deployment_edit2.png)
 
-### Task 6: Create a pipeline in Jenkins to deploy your app <a id="step9"></a>
+## Task 6: Create a pipeline in Jenkins to deploy your app <a id="step9"></a>
 
-대망의 마지막 Task 입니다. 😃 
+대망의 마지막 Task 입니다. 😃
 
 * 아래 명령어를 통해 실행중인 docker를 종료 시켜주세요.
 * CONTAINER\_ID는 docker ps에서 나온 ID를 넣어 주세요.
@@ -223,13 +223,11 @@ git commit -m "card color change to orange"
 git push origin master
 ```
 
-### Congratulations!
+## Congratulations!
 
 * 퀘스트 완료 축하합니다!!
 
 {% hint style="info" %}
 2020 3/18에 업데이트된 자료를 기반으로 작성되었습니다.
 {% endhint %}
-
-
 
