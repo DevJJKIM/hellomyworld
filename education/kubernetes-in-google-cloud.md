@@ -5,7 +5,7 @@ description: 'Kubernetes in Google Cloud: Challenge Lab의 가이드 답안입�
 # \[qwiklab\] Kubernetes in Google Cloud: Challenge Lab
 
 **\[GSP318\] Kubernetes in Google Cloud: Challenge Lab**의 Hands-on 입니다.   
-Challenge의 과정 내용은[ 랩 사이트](https://google.qwiklabs.com/focuses/10457?parent=catalog)를 통해 참고하여 주세요. 모든 수행과정은 퀵랩의 순서로 진행됩니다.  
+Challenge의 과정 내용은[ 퀵랩 사이트](https://google.qwiklabs.com/focuses/10457?parent=catalog)를 통해 참고하여 주세요. 모든 수행과정은 퀵랩의 순서로 진행됩니다.  
 이번 Lab은 GKE환경 및 Jenkins를 활용한 배포관리를 경험할 수 있어, 향후 다른 프로젝트 적용시에 참고될 수 있는 Lab 입니다.  
 전체 과정을 수행하는데는 약 40여분 정도 소요 됩니다.
 
@@ -195,7 +195,7 @@ kubectl port-forward $POD_NAME 8080:8080 >> /dev/null &
   * Branch Sources에서 Git 선택
   * GCP Consol에서 `gcloud source repos list`를 통해 소스저장소 URL을 확인\(https://source.developers.google.com/p/\[PROJECT\_ID\]/r/valkyrie-app 의 형식, \[PROJECT\_ID\]에는 Cloud Console의 PROJECT ID를 입력합니다.\)
   * 해당 URL을 복사하여 Repository URL에 붙여넣고, Credentials를 프로젝트 ID로 선택
-  * Scan Multibranch Pipeline Triggers에서 Periodically if not otherwise run 체크 후, Interval 은 1minite으로 설정 후 Apply, Save 클 
+  * Scan Multibranch Pipeline Triggers에서 Periodically if not otherwise run 체크 후, Interval 은 1minite으로 설정 후 Apply, Save 클릭 
 
 ![GCP &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5F0;&#xB3D9;](../.gitbook/assets/jenkins1.jpg)
 
@@ -213,7 +213,7 @@ kubectl port-forward $POD_NAME 8080:8080 >> /dev/null &
 * 경로를 `valkyrie-app`폴더로 이동합니다.
 * 초기 빌드에는 시간이 걸리므로, 실행중인 프로세스를 Console Output을 통해 모니터링하십시오.
 * 빌드가 완료되면 테이블 색이 orange로 변경되었는지 확인 합니다.
-* 사이트에서 마지  **Check my progress**를 클릭하세요.
+* 사이트에서 마지막  **Check my progress**를 클릭하세요.
 
 ```text
 git config --global user.email "student@qwiklabs.net"
