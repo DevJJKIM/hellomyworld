@@ -144,6 +144,7 @@ git push origin master
 
 * 소스 merge가 완료 되면 아래와 같이 GCR에 docker 수정 빌드 하여 줍니다.
 * docker build 실행 전, **Dockerfile이 있는 위치\(valkyrie-app\)에서 docker build를 실행**하여 주세요.
+* 코드는 한줄 씩 실행시켜 주세요.
 
 ```text
 docker build -t valkyrie-app:v0.0.2 .
