@@ -4,3 +4,8 @@
 * [교육자료](education/README.md)
   * [\[qwiklab\] Kubernetes in Google Cloud: Challenge Lab](education/kubernetes-in-google-cloud.md)
 
+## GCP 가이드
+
+* [GCP가이드](gcp/undefined/README.md)
+  * [1-2. \[GCP\] Billing Account ID\(결제계정\) 연동 방법](gcp/undefined/1-2.-gcp-billing-account-id.md)
+
