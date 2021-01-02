@@ -1,10 +1,10 @@
 # GKE 뽀개기
 
-## 1. GKE\(Google Kubernetes Engine\)란
+### 1. GKE\(Google Kubernetes Engine\)란
 
 GKE\(Google Kubernetes Engine\)는 Google Cloud Platform이 제공하는 Managed 서비스입니다.
 
-## 2. GKE 시작하기
+### 2. GKE 시작하기
 
 ### Task1. GKE Cluster 생성하기
 
