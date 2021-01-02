@@ -2,7 +2,7 @@
 
 ### 1. GKE\(Google Kubernetes Engine\)란
 
-GKE\(Google Kubernetes Engine\)는 Google Cloud Platform이 제공하는 Managed 서비스입니다.
+GKE\(Google Kubernetes Engine\)는 Google Cloud Platform이 제공하는 Kubernetes Managed 서비스입니다.
 
 ### 2. GKE 시작하기
 
