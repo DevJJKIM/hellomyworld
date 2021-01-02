@@ -204,3 +204,9 @@ EXTERNAL-IP가 생성된 것으로 확인 할 수 있으며, 해당 IP로 접근
 
 ![](../../.gitbook/assets/image%20%2824%29.png)
 
+### 5. ClusterIP, NodePort, LoadBalancer, Ingress의 차이
+
+아래 링크에서 외부 노출 방법 및 각각 설정이 필요한 환경에 따라 적용방식들을 고려해볼 수 있습니다. [Learn more](https://blog.leocat.kr/notes/2019/08/22/translation-kubernetes-nodeport-vs-loadbalancer-vs-ingress)  
+원문링크 : [https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0)  
+
+
