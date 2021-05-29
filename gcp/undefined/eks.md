@@ -16,7 +16,8 @@ EKS는 2가지 방법으로 클러스터를 생성할 때 사용할 수 있습�
 ### Task1. 환경 구성하기
 
 시작하기 앞ㅇ서 eksctl을 사용하기 위해서는 다음과 같은 Tool을 설치하여 합니다.  
-해당 설치 트랙은 Linux기반으로 진행되오니 Window10 환경의 유저분들은 아래 링크를 참조하시어 Linux환경을 설치하시 바랍니다.  [https://jjnomad.tistory.com/2](https://jjnomad.tistory.com/2)
+해당 설치 트랙은 Linux기반으로 진행되오니 Window10 환경의 유저분들은 아래 링크를 참조하시어 Linux환경을 설치하시 바랍니다.  [https://jjnomad.tistory.com/2](https://jjnomad.tistory.com/2)  
+또는, Cloud9 AWS WEB IDE를 활용할 수도 있습니다.
 
 ### awscli
 
@@ -62,5 +63,11 @@ eksctl은 flags를 활용하여 옵션값을 지정할 수 있습니다. 지정�
 * 노드타입 : t3.medium
 * ssh-public-key : 방금전 생성한 퍼블릭키를 사용합니다.
 
-생성할 클러스터의 이름은 my-cluster으로 하고, region은 us
+### 4. CloudFormation 살펴보기
+
+eksctl을 사용하면 CloudFormation에서 클러스터 생성에 필요한 여러 자원들을 자동으로 설치하여 줍니다.
+
+
+
+### **5. EKS 살펴보기**
 
