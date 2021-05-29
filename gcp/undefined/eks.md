@@ -17,7 +17,7 @@ EKS는 2가지 방법으로 클러스터를 생성할 때 사용할 수 있습�
 
 시작하기 앞ㅇ서 eksctl을 사용하기 위해서는 다음과 같은 Tool을 설치하여 합니다.  
 해당 설치 트랙은 Linux기반으로 진행되오니 Window10 환경의 유저분들은 아래 링크를 참조하시어 Linux환경을 설치하시 바랍니다.  [https://jjnomad.tistory.com/2](https://jjnomad.tistory.com/2)  
-또는, **Cloud9 AWS WEB IDE**를 활용할 수도 있습니다.
+또는, **Cloud9 AWS WEB IDE**를 활용할 수도 있습니다. 콘솔에서 Cloud9 확인 할 수 있습니다.
 
 ### awscli
 
