@@ -9,4 +9,5 @@
 * [GCP가이드](gcp/undefined/README.md)
   * [1-2. \[GCP\] Billing Account ID\(결제계정\) 연동 방법](gcp/undefined/1-2.-gcp-billing-account-id.md)
   * [GKE 뽀개기](gcp/undefined/gke.md)
+  * [EKS 뽀개기](gcp/undefined/eks.md)
 
