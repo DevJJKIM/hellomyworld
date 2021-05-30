@@ -176,3 +176,8 @@ eksctl delete cluster --name my-cluster -r us-west-2
 
 CloudFormation에서 작업결과를 확인하실 수 있습니다.
 
+### Reference
+
+1. [https://docs.aws.amazon.com/ko\_kr/eks/latest/userguide/getting-started.html](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started.html)
+2. [https://www.eksworkshop.com/010\_introduction/](https://www.eksworkshop.com/010_introduction/)
+
