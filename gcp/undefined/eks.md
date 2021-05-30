@@ -143,5 +143,20 @@ deployment.apps/my-nginx created 결과를 확인되면, 정상적으로 만들�
 
 ![](../../.gitbook/assets/image%20%2837%29.png)
 
-Task3. 
+### Task3. 서비스 외부 노출하기
+
+현재 외부로 노출된 상태가 아니기 때문에 접근이 불가능 합니다. 이제 외부로 노출하는 작업을 수행하겠습니다. 
+
+```bash
+kubectl expose deployment/my-nginx \
+        --port=80 --target-port=80 \
+        --name=my-nginx-service \
+        --type=LoadBalancer
+```
+
+service/my-nginx-service exposed 결과가 확인되면 외부 노출이 된 상태입니다.
+
+![](../../.gitbook/assets/image%20%2838%29.png)
+
+
 
