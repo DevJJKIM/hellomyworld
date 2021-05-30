@@ -194,7 +194,7 @@ kubectl run hello-server --image gcr.io/google-samples/hello-app:1.0 --port 8080
 
 위의 명령어로 하나의 Pod가 생성된 것을 확인 할 수 있습니다. 현재 외부로 노출된 상태가 아니기 때문에 접근이 불가능 합니다. 이제 외부로 노출하는 작업을 수행하겠습니다.
 
-### Task3. 서비스 외부 노출하
+### Task3. 서비스 외부 노출하기 
 
 ```text
 kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
