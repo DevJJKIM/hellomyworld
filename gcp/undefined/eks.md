@@ -156,7 +156,23 @@ kubectl expose deployment/my-nginx \
 
 service/my-nginx-service exposed 결과가 확인되면 외부 노출이 된 상태입니다.
 
+![](../../.gitbook/assets/image%20%2839%29.png)
+
 ![](../../.gitbook/assets/image%20%2838%29.png)
 
+생성된 웹서버를 확인할 수 있습니다.
 
+### Task4. 클러스터 삭제하기
+
+지금까지 만든 클러스터를 삭제합니다.
+
+```bash
+# 배포한 서비스를 삭제합니다.
+kubectl delete svc my-nginx-service
+
+# 생성한 클러스터를 삭제합니다.
+eksctl delete cluster --name my-cluster -r us-west-2
+```
+
+CloudFormation에서 작업결과를 확인하실 수 있습니다.
 
