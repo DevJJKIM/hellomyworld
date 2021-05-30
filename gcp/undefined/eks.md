@@ -67,7 +67,78 @@ eksctl은 flags를 활용하여 옵션값을 지정할 수 있습니다. 지정�
 
 eksctl을 사용하면 CloudFormation에서 클러스터 생성에 필요한 여러 자원들을 자동으로 설치하여 줍니다.
 
+![](../../.gitbook/assets/image%20%2828%29.png)
 
+생성되는데는 약 15분정도 소요 됩니다.
+
+![](../../.gitbook/assets/image%20%2836%29.png)
+
+생성결과를 확인해보면 .kube/config에 kubeconfig 정보가 있습니다. 이정보로 만들어진 클러스터에 kubectl cli로 명령어를 처리할 수 있습니다.
+
+노드가 잘 생성되었는지 확인해보겠습니다. `kubectl get nodes`
+
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 ### **5. EKS 살펴보기**
+
+콘솔을 통해 생성된 클러스터의 정보들을 확인해보겠습니다.
+
+#### 클러스터 정보 확인
+
+![](../../.gitbook/assets/image%20%2834%29.png)
+
+#### 노드 그룹 확인
+
+![](../../.gitbook/assets/image%20%2831%29.png)
+
+노드그룹 상세정보에서   
+**인스턴스 유형, Auto Scling그룹, 노드의  크기, 서브넷 구성** 등을 확인할 수 있습니다.
+
+![](../../.gitbook/assets/image%20%2829%29.png)
+
+### **6. Nginx 배포하기**
+
+웹 서버 배포로 구성된 인프라환경을 테스트 해보겠습니다.
+
+#### 배포 Deployment 파일 만들기
+
+Pod에 ngnix를 만들 수 있는 yaml을 생성합니다.
+
+```bash
+cat <<EoF > my-nginx.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+spec:
+  selector:
+    matchLabels:
+      run: my-nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-nginx
+    spec:
+      containers:
+      - name: my-nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+EoF
+```
+
+해당 파일은 기 생성된 EKS 클러스터에 배포합니다.
+
+```bash
+# create the nginx deployment with 2 replicas
+kubectl apply -f ./my-nginx.yaml
+```
+
+deployment.apps/my-nginx created 결과를 확인되면, 정상적으로 만들어진 상태입니다.  
+`kubectl get pods -o wide` 입력하여 생성된 Pod의 결과를 확인 하겠습니다. 
+
+![](../../.gitbook/assets/image%20%2837%29.png)
+
+
 
