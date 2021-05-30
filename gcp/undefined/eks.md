@@ -100,7 +100,7 @@ eksctl을 사용하면 CloudFormation에서 클러스터 생성에 필요한 여
 
 웹 서버 배포로 구성된 인프라환경을 테스트 해보겠습니다.
 
-#### 배포 Deployment 파일 만들기
+### Task1. 배포 Deployment 파일 만들기
 
 Pod에 ngnix를 만들 수 있는 yaml을 생성합니다.
 
@@ -135,10 +135,13 @@ EoF
 kubectl apply -f ./my-nginx.yaml
 ```
 
-deployment.apps/my-nginx created 결과를 확인되면, 정상적으로 만들어진 상태입니다.  
+deployment.apps/my-nginx created 결과를 확인되면, 정상적으로 만들어진 상태입니다.
+
+### Task2. Pod 생성 결과 확인하
+
 `kubectl get pods -o wide` 입력하여 생성된 Pod의 결과를 확인 하겠습니다. 
 
 ![](../../.gitbook/assets/image%20%2837%29.png)
 
-
+Task3. 
 
