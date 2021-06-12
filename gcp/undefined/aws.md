@@ -9,7 +9,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 실습에서 활용되는 소스는 모두 AWS에서 제공하는 Sample 소스를 활용합니다.  
 모든 실습은 **미국 서부\(오레곤\) us-west-2**에서 진행하고, 다른 리전에서 진행해도 무방합니다.
 
-![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xAD6C;&#xC131;&#xB3C4;](../../.gitbook/assets/image%20%2881%29.png)
+![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xAD6C;&#xC131;&#xB3C4;](../../.gitbook/assets/image%20%2889%29.png)
 
 ## 제품소개
 
@@ -27,7 +27,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 
 A. Github에서 Private Repository로 저장소를 생성하겠습니다. Repository 이름은 `wildrydes-site`으로 설정합니다.
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 B. 생성된 Git Repository의 주소를 로컬PC로 클론합니다.  
 Private 저장소로 설정하였으므로 USER\_ID와 PW를 입력 합니다.
@@ -54,27 +54,27 @@ git push
 
 E. Push가 완료되 아래와 같이 결과를 확인할수 있습니다.
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 ### 2. AWS Amplify로 웹 호스팅 활성
 
 \*\*\*\*📌 AWS Amplify를 사용하여 방금 Commit한 웹사이트를 배포하도록 하겠습니다.
 
-A. Amplify Console에서 웹사이트 배포를 위해 Deliver의 ![](../../.gitbook/assets/image%20%2866%29.png)를 클릭합니다.
+A. Amplify Console에서 웹사이트 배포를 위해 Deliver의 ![](../../.gitbook/assets/image%20%2870%29.png)를 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 B. GitHub를 Repository로 활용하고 있으므로, GitHub을 클릭 후 Authorization 승인하여 줍니다.  
      이용가능 Repository는 Github외에도 다양한 저장소를 이용할 수 있습니다.
 
-![](../../.gitbook/assets/image%20%2864%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
-C. 권한 승인 후 Commit한 Repository를 선택 후 ![](../../.gitbook/assets/image%20%2875%29.png) 을 클릭합니다.  
+C. 권한 승인 후 Commit한 Repository를 선택 후 ![](../../.gitbook/assets/image%20%2881%29.png) 을 클릭합니다.  
      브랜치는 master 브랜치를 선택합니다.
 
 ![](../../.gitbook/assets/image%20%2846%29.png)
 
-E. "빌드 설정 구성"페이지에서 모든 기본 값을 그대로 두고 ![](../../.gitbook/assets/image%20%2875%29.png) 을 선택합니다.
+E. "빌드 설정 구성"페이지에서 모든 기본 값을 그대로 두고 ![](../../.gitbook/assets/image%20%2881%29.png) 을 선택합니다.
 
 F. "검토"페이지에서 ![](../../.gitbook/assets/image%20%2843%29.png) 를 선택합니다
 
@@ -83,11 +83,11 @@ G. 필요한 리소스를 생성하고 코드를 배포하는 데 몇 분 정도
 H. 사이트 이미지를 클릭하여 배포 결과를 확인합니다.  
 \(개가 말위에 타고있는 모습을 확인하시면 정상입니다.😀 \)
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 I. master 링크를 클릭하면 빌드 및 배포에 대 세부 정보와 다양한 장치에서 앱의 스크린 샷이 표시됩니다.
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 ### 3. 사이트 수정
 
@@ -105,11 +105,11 @@ git push
 
 소스 변경을 감지하면 아래와 같이 자동으로 다시 빌드 배포를 시작합니다.
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 C. 완료되면 Wild Rydes 사이트를 다시 열고 수정한 제목을 확인합니다.
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 ## Task2. 사용자관리
 
@@ -125,15 +125,15 @@ C. 완료되면 Wild Rydes 사이트를 다시 열고 수정한 제목을 확인
 
 A. Console에서 Cognito를 검색하여 클릭한 후, **사용자 풀 관리**를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 B. **사용자 풀 생성**을 선택 후 풀의 이름은 `WildRydes`으로 입력하고 **기본값 검토**를 진행합니다.
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2856%29.png)
 
 C. 검토 페이지에서 **풀 생성**을 클릭합니다. \(여기서 인증관련 다양한 옵션을 선택할 수 있습니다.\)
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 D. 이렇게 많들어진 풀ID와 ARN은 으로 활용 됩니다.
 
@@ -145,15 +145,15 @@ D. 이렇게 많들어진 풀ID와 ARN은 으로 활용 됩니다.
 
 A.  탐색 모음의 왼쪽 **일반 설정** 섹션에 있는 **앱 클라이언트**를 선택하고 **앱 클라이언트 추가**​를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 B. 앱 클라이언트 이름은 WildRydesWebApp 으로 입력하고, 보안키 생성은 체크를 해제한 후 **앱 클라이언트 생성**을 선택합니다.​
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image%20%2894%29.png)
 
 C. 사용자 풀에 액세스할 수 있는 고유한 ID와 선택적 보안키를 받게 됩니다.
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 ### 3. 웹 사이트 Config 업데이트
 
@@ -185,7 +185,7 @@ git push
 
 A.  **Giddy Up!\(가자!\)** 버튼을 선택하고, 가입을 진행합니다.
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2875%29.png)
 
 {% hint style="success" %}
 Cognito의 Default 설정때문에 최소한 대문자 하나, 숫자 하나, 특수문자 하나가 포함된 암호를 선택하여야 합니다.
@@ -197,15 +197,15 @@ B. 입력한 이메일 주소에서 Verification Code를 입력합니다.
 
 C. 입력이 정상적으로 완료되면 Pop-up이 뜨고, Login page로 redirection 됩니다.
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2871%29.png)
 
 D. Cognito에서 실제 사용자 인증이 완료되었는지 확인 합니다.
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 E. 가입한 이메일주소와 패스워드로 로그인을 진행하면, 성공적으로 인증이 완료되었다는 메시지와 함께 API가 구성되지 않았다는 알림이 나타납니다.
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 ## Task3. 서버리스 백엔드 구축
 
@@ -219,7 +219,7 @@ A.  Console에서  **DynamoDB**를 선택한 후 \[**테이블만들기**\]을 �
 
 B. 테이블에 `Rides`라는 이름을 지정하고, 형식이 문자열\(String\)인 `RideId`라는 파티션 키를 부여합니다.다른 모든 설정에는 기본값을 사용합니다. 생성을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 {% hint style="info" %}
 테이블 이름과 파티션 키는 대/소문자를 구분합니다. 제공된 ID를 정확하게 사용해야 합니다. 
@@ -235,25 +235,25 @@ A.   Console에서 **IAM**을 선택하고,  **역할** 탭에서 **역할 만�
 
 ![](../../.gitbook/assets/image%20%2849%29.png)
 
-B. AWS 서비스에서 Lambda를 선택하고 ![](../../.gitbook/assets/image%20%2863%29.png) 클릭합니다.
+B. AWS 서비스에서 Lambda를 선택하고 ![](../../.gitbook/assets/image%20%2866%29.png) 클릭합니다.
 
 ![](../../.gitbook/assets/image%20%2840%29.png)
 
-C. 정책 필터에  `AWSLambdaBasicExecutionRole` 를 입력하고 ![](../../.gitbook/assets/image%20%2857%29.png) 클릭합니다.
+C. 정책 필터에  `AWSLambdaBasicExecutionRole` 를 입력하고 ![](../../.gitbook/assets/image%20%2859%29.png) 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 D. 태그 생성은 넘어가고,  역할 이름에  `WildRydesLambda` 입력 후 **\[역할 만들기\]**를 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 E. WildRydesLambda 요약페이지에서 **인라인 정책 추가**를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
 F. 서비스에서 **DynamoDB**를 선택하고, 작업 필터링 검색 상자에 **PutItem**을 입력합니다.
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2899%29.png)
 
 G. 리소스 탭에서 **ARN 추가**를 클릭합니다.
 
@@ -265,7 +265,7 @@ H. DynamoDB생성했던 ARN정보를 입력합니다.
 
 I. 정책검토를 클릭  정책이름에  `DynamoDBWriteAccess`를 입력하고 **정책 생성**을 선택합니다.
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2864%29.png)
 
 ### 3. Lambda 함수 만들기
 
@@ -398,7 +398,7 @@ function errorResponse(errorMessage, awsRequestId, callback) {
 
 A. Console에서 **Lambda**를 선택하고 **함수 생성**을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 B. 함수 이름은  `RequestUnicorn`을 입력하고, `기존 역할` 드롭다운 메뉴에서 `WildRydesLambda`를 선택한 후 함수 생성을 클릭합니다.
 
@@ -412,11 +412,11 @@ C. index.js파일을 위의 샘플소스로 교체하고 Deploy 클릭합니다.
 
 A. 테스트 앱에서 이름필드에  `TestRequestEvent`을 입력하고 변경 사항 저장을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2853%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 B. 저장된 이벤트로 테스트를 진행합니다. 아래의 결과로 나오면 정상입니다.
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 ## Task4. RESTFul API 배포
 
@@ -424,9 +424,49 @@ B. 저장된 이벤트로 테스트를 진행합니다. 아래의 결과로 나�
 
 📌 이 API는 이전 모듈에서 생성한 Amazon Cognito 사용자 풀을 사용하여 보호됩니다.
 
+### 1. REST API 생성
 
+A. Console에서 API Gateway를 선택하고, REST API 구축을 클릭합니다.
 
+![](../../.gitbook/assets/image%20%2885%29.png)
 
+B. **New API\(새 API\)**를 선택하고 **API Name\(API 이름\)**에 `WildRydes`를 입력합니다. 엔드포인트 유형은 `Edge optimized(최적화된 엣지)`를 선택합니다.
 
+![](../../.gitbook/assets/image%20%2867%29.png)
 
+{% hint style="info" %}
+인터넷에서 퍼블릭 서비스에 액세스하려면 Edge optimized\(최적화된 엣지\)가 가장 좋습니다.   
+일반적으로 리전 엔드포인트는 같은 AWS 리전 내에서 주로 액세스하는 API에 사용됩니다.
+{% endhint %}
+
+### 2. Cognito 사용자 풀 권한 부여자 생성
+
+📌 Amazon API Gateway는 Cognito 사용자 풀에서 반환된 JWT 토큰을 사용하여 API 호출을 인증합니다.
+
+📌 기존에 생성한 사용자 풀을 사용하도록 API에 대한 권한 부여자를 구성하도록 하겠습니다.
+
+A. **권한 부여자** 탭에서 **새로운 권한 부여자 생성**을 클릭합니다.
+
+* 권한 부여자 이름에 `WildRydes`를 입력합니다.
+* 유형에 **Cognito**를 선택하고, **Token Source\(토큰 원본\)**에 `Authorization`을 입력 후 생성을 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2852%29.png)
+
+B. 사이트의 `/ride.html`에서 Auth Token정보를 복사 한 후 권한 부여자의 카드 하단에 있는 **Test\(테스트\)**를 클릭합니다.
+
+C. Auth 토큰을 팝업 대화 상자에 있는 **Authorization Token\(권한 부여 토큰\)** 필드에 붙여 넣고, **Test\(테스트\)**를 클릭합니다. 아래와 같이 응답코드가 200이면 성공입니다.
+
+![](../../.gitbook/assets/image%20%2886%29.png)
+
+### 3.  리소스 및 메서드 생성
+
+📌 API 내부에 POST 메서드로 /ride라는 새 리소스를 생성하고 Lambda와 통 구성합니다.
+
+A. **리소스 탭**에서 **리소스 생성**을 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2863%29.png)
+
+B.  리소스이름은`ride`로 입력하고 API Gateway CORS 체크하고 **리소스 생성**을 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2874%29.png)
 
