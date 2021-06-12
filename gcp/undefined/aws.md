@@ -548,9 +548,35 @@ A. 웹 사이트 도메인 아래 있는 `/ride.html`로 이동합니다.
 
 실습 이후 추가적인 비용이 들지 않도록 사용한 모든 리스는 삭제하여 줍니다.
 
+### 1. Amplify 앱 삭제
 
+* 앱 랜딩 페이지에서 ‘액션&gt; 앱 삭제’를 선택합니다. 
+
+#### 2. Amazon Cognito 사용자 풀 삭제 <a id="Amazon_Cognito_&#xC0AC;&#xC6A9;&#xC790;_&#xD480;_&#xC0AD;&#xC81C;"></a>
+
+* **사용자 풀 관리**에서 생성한 **WildRydes** 사용자 풀을 삭제합니다.
+
+### 3.  **Lambda 함수 삭제**
+
+* 생성한 `RequestUnicorn` 함수를 삭제 합니다.
+
+### 4.  **IAM 역할 삭**
+
+*  역할 탭에서 `WildRydesLambda` 역할을 삭제합니다. ****
+
+**5.**  **DynamoDB 테이블 삭제**
+
+*  생성한 **Rides** 테이블 삭제합니다.
+
+**6. API 삭제**
+
+*   **API Gateway**에서 생성한 API를 삭제합니다.
+
+### 7. CloudWatch Log 삭제
+
+*  **CloudWatch**를 선택하고, 로그그룹상에 있는 모든 로그들을 삭제합니다.
 
 ## Reference
 
-
+[https://aws.amazon.com/ko/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/](https://aws.amazon.com/ko/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
 
