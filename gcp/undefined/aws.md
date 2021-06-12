@@ -9,7 +9,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 실습에서 활용되는 소스는 모두 AWS에서 제공하는 Sample 소스를 활용합니다.  
 모든 실습은 **미국 서부\(오레곤\) us-west-2**에서 진행하고, 다른 리전에서 진행해도 무방합니다.
 
-![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xAD6C;&#xC131;&#xB3C4;](../../.gitbook/assets/image%20%2864%29.png)
+![&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xAD6C;&#xC131;&#xB3C4;](../../.gitbook/assets/image%20%2877%29.png)
 
 ## 제품소개
 
@@ -19,7 +19,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 
 📌브라우저에 로드되는 정적 웹 리소스를 호스팅하기 위해 AWS Amplify를 활용하겠습니다.
 
-![AWS Amplify &#xC5F0;&#xB3D9; &#xC2DC;&#xB098;&#xB9AC;&#xC624;](../../.gitbook/assets/image%20%2842%29.png)
+![AWS Amplify &#xC5F0;&#xB3D9; &#xC2DC;&#xB098;&#xB9AC;&#xC624;](../../.gitbook/assets/image%20%2844%29.png)
 
 ### 1. 소스저장소 생성\(Repository\)
 
@@ -27,7 +27,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 
 A. Github에서 Private Repository로 저장소를 생성하겠습니다. Repository 이름은 `wildrydes-site`으로 설정합니다.
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 B. 생성된 Git Repository의 주소를 로컬PC로 클론합니다.  
 Private 저장소로 설정하였으므로 USER\_ID와 PW를 입력 합니다.
@@ -54,40 +54,40 @@ git push
 
 E. Push가 완료되 아래와 같이 결과를 확인할수 있습니다.
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2864%29.png)
 
 ### 2. AWS Amplify로 웹 호스팅 활성
 
 \*\*\*\*📌 AWS Amplify를 사용하여 방금 Commit한 웹사이트를 배포하도록 하겠습니다.
 
-A. Amplify Console에서 웹사이트 배포를 위해 Deliver의 ![](../../.gitbook/assets/image%20%2852%29.png)를 클릭합니다.
+A. Amplify Console에서 웹사이트 배포를 위해 Deliver의 ![](../../.gitbook/assets/image%20%2862%29.png)를 클릭합니다.
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
 B. GitHub를 Repository로 활용하고 있으므로, GitHub을 클릭 후 Authorization 승인하여 줍니다.  
      이용가능 Repository는 Github외에도 다양한 저장소를 이용할 수 있습니다.
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
-C. 권한 승인 후 Commit한 Repository를 선택 후 ![](../../.gitbook/assets/image%20%2860%29.png) 을 클릭합니다.  
+C. 권한 승인 후 Commit한 Repository를 선택 후 ![](../../.gitbook/assets/image%20%2871%29.png) 을 클릭합니다.  
      브랜치는 master 브랜치를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
-E. "빌드 설정 구성"페이지에서 모든 기본 값을 그대로 두고 ![](../../.gitbook/assets/image%20%2860%29.png) 을 선택합니다.
+E. "빌드 설정 구성"페이지에서 모든 기본 값을 그대로 두고 ![](../../.gitbook/assets/image%20%2871%29.png) 을 선택합니다.
 
-F. "검토"페이지에서 ![](../../.gitbook/assets/image%20%2840%29.png) 를 선택합니다
+F. "검토"페이지에서 ![](../../.gitbook/assets/image%20%2842%29.png) 를 선택합니다
 
 G. 필요한 리소스를 생성하고 코드를 배포하는 데 몇 분 정도 걸립니다.
 
 H. 사이트 이미지를 클릭하여 배포 결과를 확인합니다.  
 \(개가 말위에 타고있는 모습을 확인하시면 정상입니다.😀 \)
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 I. master 링크를 클릭하면 빌드 및 배포에 대 세부 정보와 다양한 장치에서 앱의 스크린 샷이 표시됩니다.
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 ### 3. 사이트 수정
 
@@ -105,11 +105,11 @@ git push
 
 소스 변경을 감지하면 아래와 같이 자동으로 다시 빌드 배포를 시작합니다.
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 C. 완료되면 Wild Rydes 사이트를 다시 열고 수정한 제목을 확인합니다.
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 ## Task2. 사용자관리
 
@@ -125,19 +125,19 @@ C. 완료되면 Wild Rydes 사이트를 다시 열고 수정한 제목을 확인
 
 A. Console에서 Cognito를 검색하여 클릭한 후, **사용자 풀 관리**를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 B. **사용자 풀 생성**을 선택 후 풀의 이름은 `WildRydes`으로 입력하고 **기본값 검토**를 진행합니다.
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 C. 검토 페이지에서 **풀 생성**을 클릭합니다. \(여기서 인증관련 다양한 옵션을 선택할 수 있습니다.\)
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 D. 이렇게 많들어진 풀ID와 ARN은 으로 활용 됩니다.
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ### 2. 사용자 풀에 앱 추가
 
@@ -145,15 +145,15 @@ D. 이렇게 많들어진 풀ID와 ARN은 으로 활용 됩니다.
 
 A.  탐색 모음의 왼쪽 **일반 설정** 섹션에 있는 **앱 클라이언트**를 선택하고 **앱 클라이언트 추가**​를 선택합니다.
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 B. 앱 클라이언트 이름은 WildRydesWebApp 으로 입력하고, 보안키 생성은 체크를 해제한 후 **앱 클라이언트 생성**을 선택합니다.​
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 C. 사용자 풀에 액세스할 수 있는 고유한 ID와 선택적 보안키를 받게 됩니다.
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 ### 3. 웹 사이트 Config 업데이트
 
@@ -185,7 +185,7 @@ git push
 
 A.  **Giddy Up!\(가자!\)** 버튼을 선택하고, 가입을 진행합니다.
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2866%29.png)
 
 {% hint style="success" %}
 Cognito의 Default 설정때문에 최소한 대문자 하나, 숫자 하나, 특수문자 하나가 포함된 암호를 선택하여야 합니다.
@@ -193,19 +193,19 @@ Cognito의 Default 설정때문에 최소한 대문자 하나, 숫자 하나, �
 
 B. 입력한 이메일 주소에서 Verification Code를 입력합니다.
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 C. 입력이 정상적으로 완료되면 Pop-up이 뜨고, Login page로 redirection 됩니다.
 
-![](../../.gitbook/assets/image%20%2853%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 D. Cognito에서 실제 사용자 인증이 완료되었는지 확인 합니다.
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 E. 가입한 이메일주소와 패스워드로 로그인을 진행하면, 성공적으로 인증이 완료되었다는 메시지와 함께 API가 구성되지 않았다는 알림이 나타납니다.
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2875%29.png)
 
 ## Task3. 서버리스 백엔드 구축
 
@@ -215,19 +215,186 @@ E. 가입한 이메일주소와 패스워드로 로그인을 진행하면, 성�
 
 ### 1. Amazon DynamoDB 테이블 만들기
 
-A.  Console에서  **DynamoDB**를 선택한 후 \[**Create table**\]을 선택합니다.
+A.  Console에서  **DynamoDB**를 선택한 후 \[**테이블만들기**\]을 선택합니다.
 
+B. 테이블에 `Rides`라는 이름을 지정하고, 형식이 문자열\(String\)인 `RideId`라는 파티션 키를 부여합니다.다른 모든 설정에는 기본값을 사용합니다. 생성을 클릭합니다.
 
-
-A. 테이블에 `Rides`라는 이름을 지정하고, 형식이 문자열\(String\)인 `RideId`라는 파티션 키를 부여합니다.다른 모든 설정에는 기본값을 사용합니다.
-
-
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 {% hint style="info" %}
 테이블 이름과 파티션 키는 대/소문자를 구분합니다. 제공된 ID를 정확하게 사용해야 합니다. 
 {% endhint %}
 
+### 2. Lambda 함수를 위한 IAM 역할 만들기
 
+📌 각 Lambda 함수에는 IAM 역할이 연결되어 있습니다. 이 역할은 기능이 상호 작용하도록 허용된 다른 AWS 서비스를 정의합니다. 
+
+ 📌 Amazon CloudWatch Logs에 로그를 쓸 수 있는 권한과 DynamoDB 테이블에 항목을 쓸 수 있는 액세스 권한을 Lambda 함수에 부여하는 IAM 역할을 만들도록 하겠습니다.
+
+A.   Console에서 **IAM**을 선택하고,  **역할** 탭에서 **역할 만들기**를 선택합니다.
+
+![](../../.gitbook/assets/image%20%2848%29.png)
+
+B. AWS 서비스에서 Lambda를 선택하고 ![](../../.gitbook/assets/image%20%2859%29.png) 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2840%29.png)
+
+C. 정책 필터에  `AWSLambdaBasicExecutionRole` 를 입력하고 ![](../../.gitbook/assets/image%20%2853%29.png) 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2855%29.png)
+
+D. 태그 생성은 넘어가고,  역할 이름에  `WildRydesLambda` 입력 후 **\[역할 만들기\]**를 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2872%29.png)
+
+E. WildRydesLambda 요약페이지에서 **인라인 정책 추가**를 선택합니다.
+
+![](../../.gitbook/assets/image%20%2868%29.png)
+
+F. 서비스에서 **DynamoDB**를 선택하고, 작업 필터링 검색 상자에 **PutItem**을 입력합니다.
+
+![](../../.gitbook/assets/image%20%2887%29.png)
+
+G. 리소스 탭에서 **ARN 추가**를 클릭합니다.
+
+![](../../.gitbook/assets/image%20%2849%29.png)
+
+H. DynamoDB생성했던 ARN정보를 입력합니다.
+
+![](../../.gitbook/assets/image%20%2841%29.png)
+
+I. 정책검토를 클릭  정책이름에  `DynamoDBWriteAccess`를 입력하고 **정책 생성**을 선택합니다.
+
+![](../../.gitbook/assets/image%20%2857%29.png)
+
+### 3. Lambda 함수 만들기
+
+함수를 만들기 위한 코드는 아래 코드를 사용합니다.  [requestUnicorn.js](https://webapp.serverlessworkshops.io/serverlessbackend/lambda/requestUnicorn.js)
+
+```bash
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: MIT-0
+
+const randomBytes = require('crypto').randomBytes;
+
+const AWS = require('aws-sdk');
+
+const ddb = new AWS.DynamoDB.DocumentClient();
+
+const fleet = [
+    {
+        Name: 'Bucephalus',
+        Color: 'Golden',
+        Gender: 'Male',
+    },
+    {
+        Name: 'Shadowfax',
+        Color: 'White',
+        Gender: 'Male',
+    },
+    {
+        Name: 'Rocinante',
+        Color: 'Yellow',
+        Gender: 'Female',
+    },
+];
+
+exports.handler = (event, context, callback) => {
+    if (!event.requestContext.authorizer) {
+      errorResponse('Authorization not configured', context.awsRequestId, callback);
+      return;
+    }
+
+    const rideId = toUrlString(randomBytes(16));
+    console.log('Received event (', rideId, '): ', event);
+
+    // Because we're using a Cognito User Pools authorizer, all of the claims
+    // included in the authentication token are provided in the request context.
+    // This includes the username as well as other attributes.
+    const username = event.requestContext.authorizer.claims['cognito:username'];
+
+    // The body field of the event in a proxy integration is a raw string.
+    // In order to extract meaningful values, we need to first parse this string
+    // into an object. A more robust implementation might inspect the Content-Type
+    // header first and use a different parsing strategy based on that value.
+    const requestBody = JSON.parse(event.body);
+
+    const pickupLocation = requestBody.PickupLocation;
+
+    const unicorn = findUnicorn(pickupLocation);
+
+    recordRide(rideId, username, unicorn).then(() => {
+        // You can use the callback function to provide a return value from your Node.js
+        // Lambda functions. The first parameter is used for failed invocations. The
+        // second parameter specifies the result data of the invocation.
+
+        // Because this Lambda function is called by an API Gateway proxy integration
+        // the result object must use the following structure.
+        callback(null, {
+            statusCode: 201,
+            body: JSON.stringify({
+                RideId: rideId,
+                Unicorn: unicorn,
+                UnicornName: unicorn.Name,
+                Eta: '30 seconds',
+                Rider: username,
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        });
+    }).catch((err) => {
+        console.error(err);
+
+        // If there is an error during processing, catch it and return
+        // from the Lambda function successfully. Specify a 500 HTTP status
+        // code and provide an error message in the body. This will provide a
+        // more meaningful error response to the end client.
+        errorResponse(err.message, context.awsRequestId, callback)
+    });
+};
+
+// This is where you would implement logic to find the optimal unicorn for
+// this ride (possibly invoking another Lambda function as a microservice.)
+// For simplicity, we'll just pick a unicorn at random.
+function findUnicorn(pickupLocation) {
+    console.log('Finding unicorn for ', pickupLocation.Latitude, ', ', pickupLocation.Longitude);
+    return fleet[Math.floor(Math.random() * fleet.length)];
+}
+
+function recordRide(rideId, username, unicorn) {
+    return ddb.put({
+        TableName: 'Rides',
+        Item: {
+            RideId: rideId,
+            User: username,
+            Unicorn: unicorn,
+            UnicornName: unicorn.Name,
+            RequestTime: new Date().toISOString(),
+        },
+    }).promise();
+}
+
+function toUrlString(buffer) {
+    return buffer.toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+}
+
+function errorResponse(errorMessage, awsRequestId, callback) {
+  callback(null, {
+    statusCode: 500,
+    body: JSON.stringify({
+      Error: errorMessage,
+      Reference: awsRequestId,
+    }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
+}
+```
 
 
 
