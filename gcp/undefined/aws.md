@@ -17,7 +17,7 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 
 모바일 및 프런트 엔드 웹 개발자가 AWS에서 구동되는 안전하고 확장 가능한 풀 스택 애플리케이션을 개발하도록 지원하는 도구 및 서비스 집합입니다.
 
-**2. AWS Cognito**
+### **2. AWS Cognito**
 
 \*\*\*\*
 
