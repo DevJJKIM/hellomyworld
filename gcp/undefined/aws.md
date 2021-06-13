@@ -21,11 +21,9 @@ AWS의 서버리스 제품인 [AWS Lambda](https://aws.amazon.com/lambda/), [Ama
 
 \*\*\*\*
 
-## Task1. 정적 웹사이트 호스팅
+## Task1. 웹사이트 호스팅
 
 📌브라우저에 로드되는 정적 웹 리소스를 호스팅하기 위해 AWS Amplify를 활용하겠습니다.
-
-![AWS Amplify &#xC5F0;&#xB3D9; &#xC2DC;&#xB098;&#xB9AC;&#xC624;](../../.gitbook/assets/image%20%2845%29.png)
 
 ### 1. 소스저장소 생성\(Repository\)
 
@@ -91,7 +89,7 @@ H. 사이트 이미지를 클릭하여 배포 결과를 확인합니다.
 
 ![](../../.gitbook/assets/image%20%2894%29.png)
 
-I. master 링크를 클릭하면 빌드 및 배포에 대 세부 정보와 다양한 장치에서 앱의 스크린 샷이 표시됩니다.
+I. master 링크를 클릭하면 빌드 및 배포에 대 세부 정보와 다양한 디바이스의 앱 스크린 샷이 표시됩니다.
 
 ![](../../.gitbook/assets/image%20%2881%29.png)
 
@@ -540,10 +538,6 @@ A. 웹 사이트 도메인 아래 있는 `/ride.html`로 이동합니다.
 
 ![](../../.gitbook/assets/image%20%28102%29.png)
 
-
-
-![](../../.gitbook/assets/image%20%2864%29.png)
-
 ## Task7. 모든 리소스 삭제
 
 실습 이후 추가적인 비용이 들지 않도록 사용한 모든 리스는 삭제하여 줍니다.
@@ -562,7 +556,7 @@ A. 웹 사이트 도메인 아래 있는 `/ride.html`로 이동합니다.
 
 ### 4.  **IAM 역할 삭**
 
-*  역할 탭에서 `WildRydesLambda` 역할을 삭제합니다. ****
+*  역할 탭에서 `WildRydesLambda`역할을 삭제합니다. ****
 
 **5.**  **DynamoDB 테이블 삭제**
 
@@ -575,6 +569,12 @@ A. 웹 사이트 도메인 아래 있는 `/ride.html`로 이동합니다.
 ### 7. CloudWatch Log 삭제
 
 *  **CloudWatch**를 선택하고, 로그그룹상에 있는 모든 로그들을 삭제합니다.
+
+## Congratuation!!
+
+생성한 모든 자원까지 삭제하면 실습이 완료 됩니다.
+
+![](../../.gitbook/assets/image%20%2864%29.png)
 
 ## Reference
 
