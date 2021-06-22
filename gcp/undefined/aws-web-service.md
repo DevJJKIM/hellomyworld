@@ -5,7 +5,7 @@
 본 실습은  VPC 내 Private subnet들에 Auto Scaling Group을 이용하여 웹 서비스 인스턴스를 배포합니다.  
 이를 통해 고가용성을 확보할 수 있는 인프라환경에 Web Browser를 통하여 Sample Web Page에 접근할 수 있도록 구성합니다.
 
-![Web Service &#xCD5C;&#xC885; &#xC544;&#xD0A4;&#xD14D;&#xCC98;](../../.gitbook/assets/image%20%28116%29.png)
+![Web Service &#xCD5C;&#xC885; &#xC544;&#xD0A4;&#xD14D;&#xCC98;](../../.gitbook/assets/image%20%28118%29.png)
 
 ## Task 1. 네트워크 환경 구성
 
@@ -56,7 +56,7 @@ NAT Gateway에 할당할 탄력적 IP 지정을 위하여 **Elastic IP Allocatio
 | Availability Zone | ap-northeast-2a |
 | Private subnet name | Private subnet A |
 
-![](../../.gitbook/assets/image%20%28117%29.png)
+![](../../.gitbook/assets/image%20%28119%29.png)
 
 F. 생성결
 
@@ -96,9 +96,16 @@ C. 생성결과
 
 A. 인터넷 통신이 가능한 퍼블릭 서브넷의 라우팅 테이블을 연결합니다.
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 * 목적지가 _**10.0.0.0/16\(VPC 내부\)**_ 인 경우 **로컬 게이트웨이\(local\)** 로 트래픽을 라우팅 합니다.
 * 모든 목적지\(0.0.0.0/0\)의 트래픽을 **인터넷 게이트웨이\(igw-xxx\)** 로 라우팅 합니다.
 * **인터넷과 바로 통신** 이 가능한 라우팅 구성이므로, **퍼블릭 서브넷** 들에 적용되어야 하는 라우팅 테이블을 확인할 수 있습니다.
+
+B.  해당 라우트 테이블 조건이 연결되어 있는 서브넷을 확인하기 위하여 **서브넷 연결** 탭을 선택하고, **서브넷 연결 편집**을  클릭합니다.
+
+![](../../.gitbook/assets/image%20%28117%29.png)
+
+* `Public subnet C` 역시 해당 라우트 테이블의 규칙에 따라 **0.0.0.0/0** 으로의 트래픽을 인터넷 게이트웨이로 보내야 합니다.
+* **Edit subnet associations** 을 눌러 `Public subnet C` 도 해당 라우트 테이블에 연결합니다.
 
