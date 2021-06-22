@@ -11,4 +11,5 @@
   * [GKE 뽀개기](gcp/undefined/gke.md)
   * [EKS 뽀개기](gcp/undefined/eks.md)
   * [AWS 서버리스 웹 애플리케이션 구축하기](gcp/undefined/aws.md)
+  * [AWS의 고가용성 Web Service 구성하기](gcp/undefined/aws-web-service.md)
 
