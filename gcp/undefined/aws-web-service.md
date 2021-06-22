@@ -5,7 +5,7 @@
 본 실습은  VPC 내 Private subnet들에 Auto Scaling Group을 이용하여 웹 서비스 인스턴스를 배포합니다.  
 이를 통해 고가용성을 확보할 수 있는 인프라환경에 Web Browser를 통하여 Sample Web Page에 접근할 수 있도록 구성합니다.
 
-![Web Service &#xCD5C;&#xC885; &#xC544;&#xD0A4;&#xD14D;&#xCC98;](../../.gitbook/assets/image%20%28140%29.png)
+![Web Service &#xCD5C;&#xC885; &#xC544;&#xD0A4;&#xD14D;&#xCC98;](../../.gitbook/assets/image%20%28143%29.png)
 
 ## Task 1. 네트워크 환경 구성
 
@@ -22,7 +22,7 @@ A.  VPC Dashboard 좌측 메뉴에서 **Elastic IPs\(탄력적 IP\)** 를 클릭
 
 B. NAT Gateway에 사용할 고정된 Public IP를 생성하기 위하여 우측 하단의 **Allocate\(할당\)** 을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%28113%29.png)
+![](../../.gitbook/assets/image%20%28114%29.png)
 
 {% hint style="info" %}
 이것은 VPC Wizard를 통하여 생성할 NAT Gateway에 할당하기 위하여 미리 생성하는 것입니다.
@@ -32,11 +32,11 @@ B. NAT Gateway에 사용할 고정된 Public IP를 생성하기 위하여 우측
 
 C. 사용자 계정\(Account\)에 할당된 새로운 탄력적 IP\(Elastic IP\)를 확인 할 수 있습니다.
 
-![&#xD0C4;&#xB825;&#xC801; IP &#xC0DD;&#xC131;&#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28134%29.png)
+![&#xD0C4;&#xB825;&#xC801; IP &#xC0DD;&#xC131;&#xACB0;&#xACFC;](../../.gitbook/assets/image%20%28136%29.png)
 
 D.  **VPC Dashboard\(대시보드\)**에서 **Launch VPC Wizard\(VPC 마법사 시작\)** 을 클릭하고,  2번째 Option인 **퍼블릭 및 프라이빗 서브넷이 있는 VPC** 를 선택합니다.
 
-![](../../.gitbook/assets/image%20%28125%29.png)
+![](../../.gitbook/assets/image%20%28127%29.png)
 
 {% hint style="info" %}
 VPC 마법사가 화면상의 그림과 같이 Private Subnet에 있는 EC2 인스턴스가 Internet에 Access할 수 있도록 NAT Gateway를 자동으로 생성합니다.
@@ -56,7 +56,7 @@ NAT Gateway에 할당할 탄력적 IP 지정을 위하여 **Elastic IP Allocatio
 | Availability Zone | ap-northeast-2a |
 | Private subnet name | Private subnet A |
 
-![](../../.gitbook/assets/image%20%28145%29.png)
+![](../../.gitbook/assets/image%20%28150%29.png)
 
 F. 생성결
 
@@ -75,7 +75,7 @@ A.  VPC 콘솔 왼쪽 화면의 **Subnet** 을 클릭하고, 상단의 **Create 
 | Availability Zone | ap-northeast-2c |
 | IPv4 CIDR block | 10.0.20.0/24 |
 
-![](../../.gitbook/assets/image%20%28117%29.png)
+![](../../.gitbook/assets/image%20%28118%29.png)
 
 B.  프라이빗 서브넷도 하나 더 생성하기 위하여, **Create Subnet** 버튼을 클릭합니다. 그리고 아래의 값으로 지정하고, **Create** 버튼을 눌러 Private subnet C를 성합니다.
 
@@ -96,7 +96,7 @@ C. 생성결과
 
 A. 인터넷 통신이 가능한 퍼블릭 서브넷의 라우팅 테이블을 연결합니다.
 
-![](../../.gitbook/assets/image%20%28135%29.png)
+![](../../.gitbook/assets/image%20%28137%29.png)
 
 * 목적지가 _**10.0.0.0/16\(VPC 내부\)**_ 인 경우 **로컬 게이트웨이\(local\)** 로 트래픽을 라우팅 합니다.
 * 모든 목적지\(0.0.0.0/0\)의 트래픽을 **인터넷 게이트웨이\(igw-xxx\)** 로 라우팅 합니다.
@@ -104,18 +104,18 @@ A. 인터넷 통신이 가능한 퍼블릭 서브넷의 라우팅 테이블을 �
 
 B.  해당 라우트 테이블 조건이 연결되어 있는 서브넷을 확인하기 위하여 **서브넷 연결** 탭을 선택하고, **서브넷 연결 편집**을  클릭합니다.
 
-![](../../.gitbook/assets/image%20%28137%29.png)
+![](../../.gitbook/assets/image%20%28140%29.png)
 
 * `Public subnet C` 역시 해당 라우트 테이블의 규칙에 따라 **0.0.0.0/0** 으로의 트래픽을 인터넷 게이트웨이로 보내야 합니다.
 * **Edit subnet associations** 을 눌러 `Public subnet C` 도 해당 라우트 테이블에 연결합니다.
 
 C.  혼선을 방지하기 위해, 라우트 테이블의 **Name** 필드를 눌러 `Public route` 이름을 붙여 줍니다.
 
-![](../../.gitbook/assets/image%20%28112%29.png)
+![](../../.gitbook/assets/image%20%28113%29.png)
 
 D. 프라이빗 서브넷들을 위한 라우 테이블도 퍼블릭 서브넷과 같이 라우팅 테이블을 설정합니다.
 
-![](../../.gitbook/assets/image%20%28111%29.png)
+![](../../.gitbook/assets/image%20%28112%29.png)
 
 E.  **Name** 필드를 눌러 `Private route` 라고 라우트 테이블의 이름을 지정해 줍니다.
 
@@ -129,13 +129,13 @@ F. 현재까지 생성 결과
 
 A.  AWS Management Console 좌측 상단의 _**Services**_ 메뉴를 클릭하고 EC2 를 선택하고,  **EC2 Dashboard**에서  **인스턴스 시작**을 선택합니다.
 
-![](../../.gitbook/assets/image%20%28114%29.png)
+![](../../.gitbook/assets/image%20%28115%29.png)
 
 B. _**\[단계 1: Amazon Machine Image\(AMI\) 선택\]**_에서 `Amazon Linux 2 AMI`를 선택하십시오.
 
-![](../../.gitbook/assets/image%20%28132%29.png)
+![](../../.gitbook/assets/image%20%28134%29.png)
 
-C. 인스턴스 타입은 `t2.micro` 를 선택하고 ![](../../.gitbook/assets/image%20%28124%29.png) 를 선택합니다.
+C. 인스턴스 타입은 `t2.micro` 를 선택하고 ![](../../.gitbook/assets/image%20%28126%29.png) 를 선택합니다.
 
 D. _**\[단계 3: 인스턴스 세부 정보 구성\]**_에서 아래의 정보들을 입력합니다.
 
@@ -145,7 +145,7 @@ D. _**\[단계 3: 인스턴스 세부 정보 구성\]**_에서 아래의 정보�
 | Subnet |  `Public subnet A`를 찾아 선택합니다. |
 | Auto-assign Public IP | 활성화\(Enable\) |
 
-![](../../.gitbook/assets/image%20%28133%29.png)
+![](../../.gitbook/assets/image%20%28135%29.png)
 
 E. 고급 세부정보에 Sample webpage를 위한 스크립트를 적용 합니다.
 
@@ -161,21 +161,21 @@ F. 태그를 추가하여 줍니다.
 | :--- | :--- |
 | Name | Web server for custom AMI |
 
-![](../../.gitbook/assets/image%20%28130%29.png)
+![](../../.gitbook/assets/image%20%28132%29.png)
 
 G. 보안 그룹을 생성합니다. 보안 그룹은 방화벽 정책으로 허용하고자 하는 프로토콜과 주소를 지정하게 됩니다.
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
 H. key pair 생성은 생략하고 진행합니다.
 
-![](../../.gitbook/assets/image%20%28147%29.png)
+![](../../.gitbook/assets/image%20%28152%29.png)
 
 I.  새로운 웹 브라우저 탭을 열고 URL 주소 입력하는 영역에, EC2 인스턴스의 **퍼블릭 DNS 또는 IPv4 퍼블릭 IP를 입력**하십시오. 아래와 같이 페이지가 보여지면 웹 서버 인스턴스가 정상적으로 구성된 것입니다.
 
-![](../../.gitbook/assets/image%20%28148%29.png)
+![](../../.gitbook/assets/image%20%28153%29.png)
 
-![](../../.gitbook/assets/image%20%28142%29.png)
+![](../../.gitbook/assets/image%20%28145%29.png)
 
 ### 2. 커스텀 AMI 생성
 
@@ -183,11 +183,11 @@ I.  새로운 웹 브라우저 탭을 열고 URL 주소 입력하는 영역에, 
 
 A.  EC2 콘솔에서 기 생성한 인스턴스를 선택하고, **Actions** -&gt; **Image and templates** -&gt; **Create Image** 를 선택합니다. 아래와 같이 입력하고 이미지를 생성합니다.
 
-![](../../.gitbook/assets/image%20%28126%29.png)
+![](../../.gitbook/assets/image%20%28128%29.png)
 
 B. AMI 생성 결과를 확인 합니다.  **Available** 상태가 확인 되면 정상입니다.
 
-![](../../.gitbook/assets/image%20%28141%29.png)
+![](../../.gitbook/assets/image%20%28144%29.png)
 
 {% hint style="info" %}
  _**방금 생성한 EC2 인스턴스를 이용하여 오토스케일링에 사용하기 위하여 커스텀 AMI\(골든 이미지\) 생성을 완료하였습니다.**_ 따라서, 현재 생성한 EC2 인스턴스는 더 이상 필요가 없어 졌으므로, 종료\(Termination\)합니다.
@@ -201,11 +201,11 @@ AWS Elastic Load Balancing은 Application Load Balancer, Network Load Balancer, 
 
 A.  **EC2 관리 콘솔**에서 **Load Balancing** 항목 아래 **Load Balancers** 를 클릭하고, 가운데 위의 **Create Load Balancer** 를 클릭합니다.
 
-![](../../.gitbook/assets/image%20%28131%29.png)
+![](../../.gitbook/assets/image%20%28133%29.png)
 
 B.  **Application Load Balance** 선택합니다.
 
-![](../../.gitbook/assets/image%20%28121%29.png)
+![](../../.gitbook/assets/image%20%28123%29.png)
 
 C. 환경설정 정보들을 입력하니다.
 
@@ -215,23 +215,23 @@ C. 환경설정 정보들을 입력하니다.
 | VPC   | VPC-Lab |
 |  Availability Zones | ap-northeast-2a\(Public subnet A\), ap-northeast-2c\(Public subnet C\) |
 
-![](../../.gitbook/assets/image%20%28146%29.png)
+![](../../.gitbook/assets/image%20%28151%29.png)
 
-![](../../.gitbook/assets/image%20%28139%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 D. _**\[3단계: 보안 그룹 구성\]**_ 으로 넘어가서 새로운 보안 그룹을 생성합니다.  
  **Security group name** 에 `Web-ALB-SG` 를 입력하고 **Type** 드롭다운 메뉴에서 `HTTP`를 찾아 선택합니다. 
 
-![](../../.gitbook/assets/image%20%28120%29.png)
+![](../../.gitbook/assets/image%20%28122%29.png)
 
 E. \[4단계: 라우팅 구성\] 에서 위에서 설정한 리스너가 트래픽을 넘겨줄 대상 그룹을 설정합니다.  
 아직 트래픽을 받아 처리해 줄 인스턴스가 없으므로  **Name**만 `Web-TG` 로 만들고 다음 단계로 넘어갑니다.
 
-![](../../.gitbook/assets/image%20%28122%29.png)
+![](../../.gitbook/assets/image%20%28124%29.png)
 
 F. 생성을 클릭하면 아래와 같이 생성결과를 확인할 수 있습니다.
 
-![](../../.gitbook/assets/image%20%28138%29.png)
+![](../../.gitbook/assets/image%20%28141%29.png)
 
 ### 2. 보안 그룹 생성
 
@@ -239,7 +239,7 @@ F. 생성을 클릭하면 아래와 같이 생성결과를 확인할 수 있습�
 
 A.  EC2 콘솔에서  **Security Groups**를 선택하고, **Create Security Group** 을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%28150%29.png)
+![](../../.gitbook/assets/image%20%28155%29.png)
 
 B. 보안 그룹 생성을 위한 정보들을 입력합니다.
 
@@ -249,11 +249,11 @@ B. 보안 그룹 생성을 위한 정보들을 입력합니다.
 | Description | HTTP Allow |
 | VPC | VPC-Lab |
 
-![](../../.gitbook/assets/image%20%28144%29.png)
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 C.  **ALB에서 들어오는 HTTP 트래픽만 받도록** Inbound Rule을 수정합니다.
 
-![](../../.gitbook/assets/image%20%28115%29.png)
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 | Key | Value |
 | :--- | :--- |
@@ -262,7 +262,7 @@ C.  **ALB에서 들어오는 HTTP 트래픽만 받도록** Inbound Rule을 수�
 
 D. 인터넷에서 ALB를 통해 인스턴스로 들어오는 HTTP 연결\(TCP 80\)에 대해서만 트래픽을 허용하는 보안 그룹을 생성하였습니다.
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28130%29.png)
 
 ### 3. 시작 템플릿 생성
 
@@ -271,7 +271,7 @@ D. 인터넷에서 ALB를 통해 인스턴스로 들어오는 HTTP 연결\(TCP 8
 
 A.  EC2 콘솔에서  **Launch Templates**의 **Create Launch Template**을 클릭합니다.
 
-![](../../.gitbook/assets/image%20%28119%29.png)
+![](../../.gitbook/assets/image%20%28121%29.png)
 
 B.  먼저 **Launch template name** 과 **Template version description** 을 아래와 같이 설정하고, Auto Scaling guidance의 **Provide guidance** 항목의 _**체크박스를 선택**_ 합니다. 이 체크박스를 선택하여 생성하는 템플릿이 Amazon EC2 Auto Scaling에서 활용되도록 설정합니다.
 
@@ -281,25 +281,39 @@ B.  먼저 **Launch template name** 과 **Template version description** 을 아
 | Template version description | Immersion Day Web Instances Template – Web only |
 | Auto Scaling guidance |  **Provide guidance to help me set up a template that I can use with EC2 Auto Scaling** 체크 박스 클릭 |
 
-![](../../.gitbook/assets/image%20%28136%29.png)
+![](../../.gitbook/assets/image%20%28138%29.png)
 
 C.  **Amazon Machine Image\(AMI\)** 란에는 이전 EC2 실습에서 만든 AMI\(`Web Server v1`\)를 찾아 설정합니다. 인스턴스 타입은 `t2.micro`를 선택합니다.
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28125%29.png)
 
 D. 네트워크 설정에서 기존에 만들었던 `ASG-Web-Inst-SG`를 선택합니다.
 
-![](../../.gitbook/assets/image%20%28129%29.png)
+![](../../.gitbook/assets/image%20%28131%29.png)
 
 E. Tag에는 아래와 같이 입력합니다.
 
-![](../../.gitbook/assets/image%20%28127%29.png)
+![](../../.gitbook/assets/image%20%28129%29.png)
 
 F. 시작템플릿이 정상 생성되었습니다.
 
-![](../../.gitbook/assets/image%20%28149%29.png)
+![](../../.gitbook/assets/image%20%28154%29.png)
 
 ### 4. Auto Scaling Group 구성
 
+![](../../.gitbook/assets/image%20%28148%29.png)
 
+A. Auto Scaling 그룹의 이름을 지정합니다. `Web-ASG` 으로 이름을 지정하고, 템플릿은 방금 만든 Web을 지정합니다.
+
+![](../../.gitbook/assets/image%20%28120%29.png)
+
+B. 네트워크는 기존의 VPC와 Private Subnet으로 설정하여 인스턴스의 위치를 결정하여 줍니다.
+
+![](../../.gitbook/assets/image%20%28111%29.png)
+
+C. 로드 밸러싱은 기존 로드밸런서를 선택하고, 모니터링을 위해 CloudWatch로 지표 수집을 활성화 시킵니다.
+
+![](../../.gitbook/assets/image%20%28139%29.png)
+
+![](../../.gitbook/assets/image%20%28149%29.png)
 
