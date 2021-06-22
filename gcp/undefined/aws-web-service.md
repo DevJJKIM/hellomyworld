@@ -369,5 +369,7 @@ D.  **Instance** 탭을 클릭하, 두 개의 인스턴스가 추가적으로 �
 
 ![](../../.gitbook/assets/image%20%28157%29.png)
 
+## Reference
 
+[https://general-immersionday.workshop.aws/ko/network.html](https://general-immersionday.workshop.aws/ko/network.html)
 
